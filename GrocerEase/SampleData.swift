@@ -53,12 +53,17 @@ let safeTestItems = [
     Item(name: "name2", desc: "desc2", quantity: "qant2")
 ]
 
+let uiTestItems = [
+    Item(name: "test name", desc: "really goddamn long test description that is absolute bullshit in length", quantity: "1")
+]
+
 let storedLists = [
     //List(name: "safe list", list_items: safeTestItems)
     List(name: "hamburger recipe", list_items: hamburgerItems),
     List(name: "this week's shopping", list_items: shoppingItems),
     List(name: "beer shopping list", list_items: beerItems),
-    List(name: "fried oysters", list_items: oystersItems)
+    List(name: "fried oysters", list_items: oystersItems),
+    List(name: "UI Test", list_items: uiTestItems)
 ]
 
 //https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html#//apple_ref/doc/uid/TP40015214-CH14-SW1

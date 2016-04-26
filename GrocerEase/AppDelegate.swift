@@ -99,24 +99,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    func colorSchemeHandler() {
-        darkScheme()
-    }
-    
-    func darkScheme() {
-        //Status bar
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
-        //Navigation bar
-        let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.blackColor()
-        navigationBarAppearace.barTintColor = UIColor.blackColor()
-        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        
-        //View Controller
-        
-    }
 
 }
 

@@ -51,7 +51,7 @@ class SpecificListViewController: UITableViewController {
         })
         
         //delete appearance
-//        deleteAction.backgroundColor = Colors.hotMayDay
+        deleteAction.backgroundColor = Colors.hotMayDay
         
         return [deleteAction]
     }

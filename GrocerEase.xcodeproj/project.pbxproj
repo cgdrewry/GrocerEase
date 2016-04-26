@@ -29,10 +29,10 @@
 		B5689ABF1CB9C79800A5E31E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689ABE1CB9C79800A5E31E /* LoginViewController.swift */; };
 		B5689AC11CB9C7B300A5E31E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5689AC01CB9C7B300A5E31E /* SignupViewController.swift */; };
 		B578CE5B1CBB08A6006D022F /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578CE5A1CBB08A6006D022F /* ItemDetailsViewController.swift */; };
-		B578CE5D1CBB1490006D022F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578CE5C1CBB1490006D022F /* Theme.swift */; };
 		B57C57B31CA9B8300070074F /* ListSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */; };
 		B57C57B91CAAD6BA0070074F /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57B81CAAD6BA0070074F /* AddListViewController.swift */; };
 		B57C57BB1CAAE6980070074F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57BA1CAAE6980070074F /* SettingsViewController.swift */; };
+		B5EDD2871CCEB93900C2C417 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDD2861CCEB93900C2C417 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,10 +60,10 @@
 		B5689ABE1CB9C79800A5E31E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B5689AC01CB9C7B300A5E31E /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B578CE5A1CBB08A6006D022F /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
-		B578CE5C1CBB1490006D022F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSettingsViewController.swift; sourceTree = "<group>"; };
 		B57C57B81CAAD6BA0070074F /* AddListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
 		B57C57BA1CAAE6980070074F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B5EDD2861CCEB93900C2C417 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,6 @@
 				B5689ABE1CB9C79800A5E31E /* LoginViewController.swift */,
 				B5689AC01CB9C7B300A5E31E /* SignupViewController.swift */,
 				B53071711CA4C43400C9338F /* SampleData.swift */,
-				B578CE5C1CBB1490006D022F /* Theme.swift */,
 				B57C57BC1CAAF4E50070074F /* Main VCs */,
 				B57C57BE1CAAF5290070074F /* Settings VCs */,
 				B564FA4F1CA71B7300D395C3 /* Images */,
@@ -139,6 +138,7 @@
 		B57C57BC1CAAF4E50070074F /* Main VCs */ = {
 			isa = PBXGroup;
 			children = (
+				B5EDD2861CCEB93900C2C417 /* SearchViewController.swift */,
 				B530717D1CA5E22E00C9338F /* AddItemViewController.swift */,
 				B57C57B81CAAD6BA0070074F /* AddListViewController.swift */,
 				B522AC101C8E740000F1EB55 /* MasterListViewController.swift */,
@@ -252,9 +252,9 @@
 				B578CE5B1CBB08A6006D022F /* ItemDetailsViewController.swift in Sources */,
 				B57C57B91CAAD6BA0070074F /* AddListViewController.swift in Sources */,
 				B57C57BB1CAAE6980070074F /* SettingsViewController.swift in Sources */,
+				B5EDD2871CCEB93900C2C417 /* SearchViewController.swift in Sources */,
 				B522AC001C8E700F00F1EB55 /* GrocerEase.xcdatamodeld in Sources */,
 				B530717E1CA5E22E00C9338F /* AddItemViewController.swift in Sources */,
-				B578CE5D1CBB1490006D022F /* Theme.swift in Sources */,
 				B53071741CA4C44700C9338F /* Item.swift in Sources */,
 				B53071861CA605D400C9338F /* Colors.swift in Sources */,
 				B522ABFA1C8E700F00F1EB55 /* ViewController.swift in Sources */,
@@ -287,6 +287,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = shallow;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -296,6 +297,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -331,6 +333,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = shallow;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -365,11 +368,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GrocerEase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cgd.GrocerEase;
+				PRODUCT_BUNDLE_IDENTIFIER = cd.GrocerEase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -378,11 +383,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GrocerEase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cgd.GrocerEase;
+				PRODUCT_BUNDLE_IDENTIFIER = cd.GrocerEase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
