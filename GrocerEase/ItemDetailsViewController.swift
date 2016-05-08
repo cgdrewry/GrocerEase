@@ -30,6 +30,7 @@ class ItemDetailsViewController: UITableViewController {
 
         // Configure the cell...
         //cell.textLabel?.text = list.name
+        cell.textLabel?.textColor = UIColor.groupTableViewBackgroundColor()
         if (indexPath.row == 0) {
             cell.textLabel?.text = localItem.name
         } else if (indexPath.row == 1) {

@@ -8,11 +8,18 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.userTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.emailTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +38,10 @@ class SignupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
 }

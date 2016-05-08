@@ -23,6 +23,16 @@
 		B53071821CA6059200C9338F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53071811CA6059200C9338F /* LaunchScreenViewController.swift */; };
 		B53071841CA605AE00C9338F /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53071831CA605AE00C9338F /* HolderView.swift */; };
 		B53071861CA605D400C9338F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53071851CA605D400C9338F /* Colors.swift */; };
+		B530854A1CDA7A9900A7F59D /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53085491CDA7A9900A7F59D /* ListCell.swift */; };
+		B53085571CDABCAE00A7F59D /* expensive.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085521CDABCAE00A7F59D /* expensive.png */; };
+		B53085581CDABCAE00A7F59D /* cheap.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085531CDABCAE00A7F59D /* cheap.png */; };
+		B53085591CDABCAE00A7F59D /* redcupcake.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085541CDABCAE00A7F59D /* redcupcake.png */; };
+		B530855A1CDABCAE00A7F59D /* greencarrot.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085551CDABCAE00A7F59D /* greencarrot.png */; };
+		B530855B1CDABCAE00A7F59D /* bluemeal.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085561CDABCAE00A7F59D /* bluemeal.png */; };
+		B53085631CDB9CAA00A7F59D /* redstar.png in Resources */ = {isa = PBXBuildFile; fileRef = B53085621CDB9CAA00A7F59D /* redstar.png */; };
+		B537A3E01CD199CB00749446 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B537A3DF1CD199CB00749446 /* data.json */; };
+		B537A3F91CD1A2CA00749446 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B537A3EC1CD1A27700749446 /* Alamofire.framework */; };
+		B537A3FA1CD1A2CA00749446 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B537A3EC1CD1A27700749446 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B564FA4D1CA71B6A00D395C3 /* Grocery-Store-Organic-Produce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B564FA4B1CA71B6A00D395C3 /* Grocery-Store-Organic-Produce.jpg */; };
 		B564FA4E1CA71B6A00D395C3 /* shoppinghero.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B564FA4C1CA71B6A00D395C3 /* shoppinghero.jpg */; };
 		B564FA511CA71D6000D395C3 /* store-1-vintage-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B564FA501CA71D6000D395C3 /* store-1-vintage-2.jpg */; };
@@ -31,9 +41,81 @@
 		B578CE5B1CBB08A6006D022F /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578CE5A1CBB08A6006D022F /* ItemDetailsViewController.swift */; };
 		B57C57B31CA9B8300070074F /* ListSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */; };
 		B57C57B91CAAD6BA0070074F /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57B81CAAD6BA0070074F /* AddListViewController.swift */; };
-		B57C57BB1CAAE6980070074F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57C57BA1CAAE6980070074F /* SettingsViewController.swift */; };
 		B5EDD2871CCEB93900C2C417 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDD2861CCEB93900C2C417 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B537A3EB1CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		B537A3ED1CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		B537A3EF1CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		B537A3F11CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		B537A3F31CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		B537A3F51CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		B537A3F71CD1A27700749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		B537A3FB1CD1A2CA00749446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B537A3FD1CD1A2CB00749446 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B537A3FA1CD1A2CA00749446 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B522ABF41C8E700F00F1EB55 /* GrocerEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrocerEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +136,15 @@
 		B53071811CA6059200C9338F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		B53071831CA605AE00C9338F /* HolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
 		B53071851CA605D400C9338F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B53085491CDA7A9900A7F59D /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		B53085521CDABCAE00A7F59D /* expensive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expensive.png; path = ../../expensive.png; sourceTree = "<group>"; };
+		B53085531CDABCAE00A7F59D /* cheap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cheap.png; path = ../../cheap.png; sourceTree = "<group>"; };
+		B53085541CDABCAE00A7F59D /* redcupcake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redcupcake.png; path = ../../redcupcake.png; sourceTree = "<group>"; };
+		B53085551CDABCAE00A7F59D /* greencarrot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greencarrot.png; path = ../../greencarrot.png; sourceTree = "<group>"; };
+		B53085561CDABCAE00A7F59D /* bluemeal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluemeal.png; path = ../../bluemeal.png; sourceTree = "<group>"; };
+		B53085621CDB9CAA00A7F59D /* redstar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redstar.png; path = ../../redstar.png; sourceTree = "<group>"; };
+		B537A3DF1CD199CB00749446 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		B564FA4B1CA71B6A00D395C3 /* Grocery-Store-Organic-Produce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grocery-Store-Organic-Produce.jpg"; sourceTree = "<group>"; };
 		B564FA4C1CA71B6A00D395C3 /* shoppinghero.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shoppinghero.jpg; sourceTree = "<group>"; };
 		B564FA501CA71D6000D395C3 /* store-1-vintage-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "store-1-vintage-2.jpg"; sourceTree = "<group>"; };
@@ -62,7 +153,6 @@
 		B578CE5A1CBB08A6006D022F /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSettingsViewController.swift; sourceTree = "<group>"; };
 		B57C57B81CAAD6BA0070074F /* AddListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
-		B57C57BA1CAAE6980070074F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B5EDD2861CCEB93900C2C417 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B537A3F91CD1A2CA00749446 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +171,7 @@
 		B522ABEB1C8E700F00F1EB55 = {
 			isa = PBXGroup;
 			children = (
+				B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */,
 				B522ABF61C8E700F00F1EB55 /* GrocerEase */,
 				B522ABF51C8E700F00F1EB55 /* Products */,
 			);
@@ -102,8 +194,8 @@
 				B5689ABE1CB9C79800A5E31E /* LoginViewController.swift */,
 				B5689AC01CB9C7B300A5E31E /* SignupViewController.swift */,
 				B53071711CA4C43400C9338F /* SampleData.swift */,
+				B537A3DF1CD199CB00749446 /* data.json */,
 				B57C57BC1CAAF4E50070074F /* Main VCs */,
-				B57C57BE1CAAF5290070074F /* Settings VCs */,
 				B564FA4F1CA71B7300D395C3 /* Images */,
 				B57C57BD1CAAF50A0070074F /* Classes */,
 				B522AC011C8E700F00F1EB55 /* Assets.xcassets */,
@@ -125,12 +217,32 @@
 			name = "Launch Screen";
 			sourceTree = "<group>";
 		};
+		B537A3E21CD1A27700749446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B537A3EC1CD1A27700749446 /* Alamofire.framework */,
+				B537A3EE1CD1A27700749446 /* Alamofire iOS Tests.xctest */,
+				B537A3F01CD1A27700749446 /* Alamofire.framework */,
+				B537A3F21CD1A27700749446 /* Alamofire OSX Tests.xctest */,
+				B537A3F41CD1A27700749446 /* Alamofire.framework */,
+				B537A3F61CD1A27700749446 /* Alamofire tvOS Tests.xctest */,
+				B537A3F81CD1A27700749446 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B564FA4F1CA71B7300D395C3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B53085621CDB9CAA00A7F59D /* redstar.png */,
 				B564FA4B1CA71B6A00D395C3 /* Grocery-Store-Organic-Produce.jpg */,
 				B564FA501CA71D6000D395C3 /* store-1-vintage-2.jpg */,
 				B564FA4C1CA71B6A00D395C3 /* shoppinghero.jpg */,
+				B53085521CDABCAE00A7F59D /* expensive.png */,
+				B53085531CDABCAE00A7F59D /* cheap.png */,
+				B53085541CDABCAE00A7F59D /* redcupcake.png */,
+				B53085551CDABCAE00A7F59D /* greencarrot.png */,
+				B53085561CDABCAE00A7F59D /* bluemeal.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -144,6 +256,7 @@
 				B522AC101C8E740000F1EB55 /* MasterListViewController.swift */,
 				B53071771CA4C58C00C9338F /* SpecificListViewController.swift */,
 				B578CE5A1CBB08A6006D022F /* ItemDetailsViewController.swift */,
+				B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */,
 			);
 			name = "Main VCs";
 			sourceTree = "<group>";
@@ -152,19 +265,11 @@
 			isa = PBXGroup;
 			children = (
 				B53071791CA4C6B100C9338F /* ListItemCell.swift */,
+				B53085491CDA7A9900A7F59D /* ListCell.swift */,
 				B53071731CA4C44700C9338F /* Item.swift */,
 				B53071751CA4C4BE00C9338F /* List.swift */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		B57C57BE1CAAF5290070074F /* Settings VCs */ = {
-			isa = PBXGroup;
-			children = (
-				B57C57B21CA9B8300070074F /* ListSettingsViewController.swift */,
-				B57C57BA1CAAE6980070074F /* SettingsViewController.swift */,
-			);
-			name = "Settings VCs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +282,12 @@
 				B522ABF01C8E700F00F1EB55 /* Sources */,
 				B522ABF11C8E700F00F1EB55 /* Frameworks */,
 				B522ABF21C8E700F00F1EB55 /* Resources */,
+				B537A3FD1CD1A2CB00749446 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B537A3FC1CD1A2CA00749446 /* PBXTargetDependency */,
 			);
 			name = GrocerEase;
 			productName = GrocerEase;
@@ -214,6 +321,12 @@
 			mainGroup = B522ABEB1C8E700F00F1EB55;
 			productRefGroup = B522ABF51C8E700F00F1EB55 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B537A3E21CD1A27700749446 /* Products */;
+					ProjectRef = B537A3E11CD1A27700749446 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B522ABF31C8E700F00F1EB55 /* GrocerEase */,
@@ -221,17 +334,76 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		B537A3EC1CD1A27700749446 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B537A3EB1CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3EE1CD1A27700749446 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = B537A3ED1CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3F01CD1A27700749446 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B537A3EF1CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3F21CD1A27700749446 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = B537A3F11CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3F41CD1A27700749446 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B537A3F31CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3F61CD1A27700749446 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = B537A3F51CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B537A3F81CD1A27700749446 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = B537A3F71CD1A27700749446 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		B522ABF21C8E700F00F1EB55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53085591CDABCAE00A7F59D /* redcupcake.png in Resources */,
 				B564FA4D1CA71B6A00D395C3 /* Grocery-Store-Organic-Produce.jpg in Resources */,
 				B53071801CA604F900C9338F /* LaunchScreen.storyboard in Resources */,
+				B53085631CDB9CAA00A7F59D /* redstar.png in Resources */,
 				B564FA4E1CA71B6A00D395C3 /* shoppinghero.jpg in Resources */,
+				B530855B1CDABCAE00A7F59D /* bluemeal.png in Resources */,
 				B522AC021C8E700F00F1EB55 /* Assets.xcassets in Resources */,
+				B53085571CDABCAE00A7F59D /* expensive.png in Resources */,
 				B522ABFD1C8E700F00F1EB55 /* Main.storyboard in Resources */,
 				B564FA511CA71D6000D395C3 /* store-1-vintage-2.jpg in Resources */,
+				B537A3E01CD199CB00749446 /* data.json in Resources */,
+				B530855A1CDABCAE00A7F59D /* greencarrot.png in Resources */,
+				B53085581CDABCAE00A7F59D /* cheap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,13 +417,13 @@
 				B5689AC11CB9C7B300A5E31E /* SignupViewController.swift in Sources */,
 				B57C57B31CA9B8300070074F /* ListSettingsViewController.swift in Sources */,
 				B53071841CA605AE00C9338F /* HolderView.swift in Sources */,
+				B530854A1CDA7A9900A7F59D /* ListCell.swift in Sources */,
 				B53071781CA4C58C00C9338F /* SpecificListViewController.swift in Sources */,
 				B53071721CA4C43400C9338F /* SampleData.swift in Sources */,
 				B522AC111C8E740000F1EB55 /* MasterListViewController.swift in Sources */,
 				B53071761CA4C4BE00C9338F /* List.swift in Sources */,
 				B578CE5B1CBB08A6006D022F /* ItemDetailsViewController.swift in Sources */,
 				B57C57B91CAAD6BA0070074F /* AddListViewController.swift in Sources */,
-				B57C57BB1CAAE6980070074F /* SettingsViewController.swift in Sources */,
 				B5EDD2871CCEB93900C2C417 /* SearchViewController.swift in Sources */,
 				B522AC001C8E700F00F1EB55 /* GrocerEase.xcdatamodeld in Sources */,
 				B530717E1CA5E22E00C9338F /* AddItemViewController.swift in Sources */,
@@ -266,6 +438,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B537A3FC1CD1A2CA00749446 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = B537A3FB1CD1A2CA00749446 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B522ABFB1C8E700F00F1EB55 /* Main.storyboard */ = {
@@ -367,8 +547,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GrocerEase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -382,8 +564,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = GrocerEase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

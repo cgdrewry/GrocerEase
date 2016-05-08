@@ -57,13 +57,30 @@ let uiTestItems = [
     Item(name: "test name", desc: "really goddamn long test description that is absolute bullshit in length", quantity: "1")
 ]
 
+//healthy, cheap, expensive, favorite, meal
+let burgerTags = [false, true, false, false, true]
+let beerTags = [false, false, true, true, false]
+let shoppingTags = [true, true, false, false, false]
+let oysterTags = [false, false, true, true, true]
+
+//lists[0].users = "Abel, Dylan"
+//lists[1].users = "Dylan"
+//lists[2].users = "Abel, Taylor"
+//lists[3].users = "Abel, Taylor, Kevin, Kruz, Mika"
+let burgerUsers = "Abel, Dylan"
+let beerUsers = "Abel, Taylor"
+let shoppingUsers = "Dylan"
+let oysterUsers = "Abel, Taylor, Kevin, Kruz, Mika"
+
+
 let storedLists = [
     //List(name: "safe list", list_items: safeTestItems)
-    List(name: "hamburger recipe", list_items: hamburgerItems),
-    List(name: "this week's shopping", list_items: shoppingItems),
-    List(name: "beer shopping list", list_items: beerItems),
-    List(name: "fried oysters", list_items: oystersItems),
-    List(name: "UI Test", list_items: uiTestItems)
+    List(name: "hamburger recipe", list_items: hamburgerItems, tags: burgerTags, users: burgerUsers),
+    List(name: "this week's shopping", list_items: shoppingItems, tags: shoppingTags, users: shoppingUsers),
+    List(name: "beer shopping list", list_items: beerItems, tags: beerTags, users: beerUsers),
+    List(name: "fried oysters", list_items: oystersItems, tags: oysterTags, users: oysterUsers)
 ]
+
+let user = "Chris"
 
 //https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html#//apple_ref/doc/uid/TP40015214-CH14-SW1

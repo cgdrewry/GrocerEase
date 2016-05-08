@@ -1,20 +1,35 @@
 import UIKit
 
-class MasterListViewController: UITableViewController {
+class MasterListViewController: UITableViewController, UIAlertViewDelegate {
     var lists:[List] = storedLists
-    var filteredLists = [List]()
-    let searchController = UISearchController(searchResultsController: nil)
+//    var filteredLists = [List]()
+//    var searchController = UISearchController(searchResultsController: nil)
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBAction func userAlert(sender: AnyObject) {
+        // Initialize Alert View
+        let alertView = UIAlertView(title: "Not " + user + "?", message: "Log your bad self in!", delegate: self, cancelButtonTitle: "Logout", otherButtonTitles: "Cancel")
+        
+        // Configure Alert View
+        alertView.tag = 1
+        
+        // Show Alert View
+        alertView.show()
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if alertView.tag == 1 {
+            if buttonIndex == 0 {
+                self.performSegueWithIdentifier("logoutSegue", sender: nil)
+            }
+        }
+    }
     
     func viewdidLoad() {
         super.viewDidLoad()
         
-        //searchy stuff
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-
+//        searchBar.delegate = self
+//        filteredLists = lists
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,30 +37,50 @@ class MasterListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    /*====================================================================
+     Table View
+     ====================================================================*/
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
-            return filteredLists.count
-        }
+//        if searchController.active && searchController.searchBar.text != "" {
+//            return filteredLists.count
+//        }
         return lists.count
+//        return filteredLists.count
     }
     
+//    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        var headerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 44))
+//        headerView = searchController.searchBar
+//        tableView.tableHeaderView = searchController.searchBar
+//        return headerView
+//    }
+    
+    //TAGS:
+    //healthy = 0, unhealthy = 1, cheap = 2, expensive = 3, meal = 4
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //sets reuse ID
-        let cell = tableView.dequeueReusableCellWithIdentifier("list_cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("list_cell", forIndexPath: indexPath) as! ListCell
+//        let list: List
+//        if searchController.active && searchController.searchBar.text != "" {
+//            list = filteredLists[indexPath.row]
+//            cell.textLabel?.text = list.name
+//        } else {
+//            list = lists[indexPath.row]
+//            cell.textLabel?.text = list.name
+//        }
         
-        //assigns list to cell
-        let list: List
-        if searchController.active && searchController.searchBar.text != "" {
-            list = filteredLists[indexPath.row]
-        } else {
-            list = lists[indexPath.row]
-        }
-        cell.textLabel?.text = list.name
+//        let list = filteredLists[indexPath.row]
         
+        
+        let list = lists[indexPath.row]
+//        cell.textLabel?.text = list.name
+//        cell.textLabel?.textColor = UIColor.groupTableViewBackgroundColor()
+        cell.list = list
         return cell
     }
     
@@ -53,6 +88,8 @@ class MasterListViewController: UITableViewController {
     /*====================================================================
     Segue Handling
      ====================================================================*/
+    //listSegue
+    //listSettingsSegue
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("listSegue", sender: indexPath)
     }
@@ -62,6 +99,11 @@ class MasterListViewController: UITableViewController {
             let destination = (segue.destinationViewController as! SpecificListViewController)
             let row = (sender as! NSIndexPath).row
             destination.localList = lists[row]
+        }
+        if segue.identifier == "listSettingsSegue" {
+            let destination = (segue.destinationViewController as! ListSettingsViewController)
+            let row = (sender as! NSIndexPath).row
+            destination.list = lists[row]
         }
     }
     
@@ -97,7 +139,7 @@ class MasterListViewController: UITableViewController {
         let settingsAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Settings" , handler: { (action:UITableViewRowAction!, indexPath:NSIndexPath!) -> Void in
             
             // what happens when action pressed
-            self.performSegueWithIdentifier("listSettingsSegue", sender: self)
+            self.performSegueWithIdentifier("listSettingsSegue", sender: indexPath)
         })
         
         //show list settings appearance
@@ -109,7 +151,7 @@ class MasterListViewController: UITableViewController {
     
     
     /*====================================================================
-     Save List
+     Save List or Settings
      ====================================================================*/
     @IBAction func saveAddList(segue:UIStoryboardSegue) {
         if let addListViewController = segue.sourceViewController as? AddListViewController {
@@ -126,52 +168,63 @@ class MasterListViewController: UITableViewController {
     /*====================================================================
      Search
      ====================================================================*/
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredLists = lists.filter { list in
-            return list.name.lowercaseString.containsString(searchText.lowercaseString)
-        }
-        
-        tableView.reloadData()
-    }
+    //https://github.com/codepath/ios_guides/wiki/Search-Bar-Guide
+//    func filterContentForSearchText(searchText: String, scope: String = "All") {
+//        filteredLists = lists.filter { list in
+//            return list.name.lowercaseString.containsString(searchText.lowercaseString)
+//        }
+//        
+//        tableView.reloadData()
+//    }
     
+//    func searchyBar() {
+//        searchController.searchResultsUpdater = self
+//        searchController.dimsBackgroundDuringPresentation = false
+//        definesPresentationContext = true
+//        tableView.tableHeaderView = searchController.searchBar
+//    }
     
-    /*====================================================================
-     Network Stuff
-     ====================================================================*/
-    func login() {
-        let request = NSMutableURLRequest(URL: NSURL(string: "https://grocerease-capstone.herokuapp.com")!)
-        request.HTTPMethod = "POST"
-//        let postString = "email=tester&password=fuckingpassword"
-        let postString = "email=chris&password=password_passw0rd"
-        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        // check for fundamental networking error
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in guard error == nil && data != nil else {
-                print("error=\(error)")
-                return
-            }
-            
-            //check for http errors
-            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(response)")
-            }
-            
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("responseString = \(responseString)")
-        }
-        
-        task.resume()
-    }
-    
-    func resgister() {
-        
-    }
+//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+//        filteredLists = searchText.isEmpty ? lists : lists.filter({(listString: String) -> Bool in
+//            return listString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+//        })
+//        
+//    }
+//    
+    // This method updates filteredData based on the text in the Search Box
+//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+//        // When there is no text, filteredData is the same as the original data
+//        if searchText.isEmpty {
+//            filteredLists = lists
+//        } else {
+//            // The user has entered text into the search box
+//            // Use the filter method to iterate over all items in the data array
+//            // For each item, return true if the item should be included and false if the
+//            // item should NOT be included
+//            filteredLists = lists.filter({(listItem: Item) -> Bool in
+//                // If dataItem matches the searchText, return true to include it
+//                if dataItem.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil {
+//                    return true
+//                } else {
+//                    return false
+//                }
+//            })
+//        }
+//        tableView.reloadData()
+//    }
+
 
 }
 
-extension MasterListViewController: UISearchResultsUpdating {
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}
+//extension MasterListViewController: UISearchResultsUpdating {
+//    func updateSearchResultsForSearchController(searchController: UISearchController) {
+//        filterContentForSearchText(searchController.searchBar.text!)
+//    }
+//}
+
+/*
+ UI NOTES
+ 
+ Colored lists based on tag color
+ Stylized list header
+ */

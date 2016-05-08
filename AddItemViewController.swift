@@ -1,6 +1,6 @@
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AddItemViewController: UITableViewController, UITextFieldDelegate {
     //item to be saved
     var item:Item?
     
@@ -21,6 +21,10 @@ class AddItemViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.nameTextField.delegate = self
+        self.descTextField.delegate = self
+        self.quantityTextField.delegate = self
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,7 +48,7 @@ class AddItemViewController: UITableViewController {
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
         //header.contentView.backgroundColor = UIColor(red: 0/255, green: 181/255, blue: 229/255, alpha: 1.0) //make the background color light blue
-//        header.textLabel?.textColor = UIColor.whiteColor() //make the text white
+        header.textLabel?.textColor = UIColor.groupTableViewBackgroundColor()
         //header.alpha = 0.5 //make the header transparent
     }
     
@@ -53,6 +57,11 @@ class AddItemViewController: UITableViewController {
         if segue.identifier == "SaveAddItem" {
             item = Item(name: nameTextField.text!, desc: descTextField.text!, quantity: quantityTextField.text!)
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 }

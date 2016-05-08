@@ -8,11 +8,17 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.userTextField.delegate = self
+        self.passwordTextField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +37,10 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
 }
